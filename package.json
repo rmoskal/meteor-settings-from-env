@@ -1,0 +1,27 @@
+{
+  "name": "meteor-settings-from-env",
+  "version": "0.0.1",
+  "description": "Maps environment variables to Meteor settings",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "mocha --recursive --reporter spec test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmoskal/meteor-settings-from-env.git"
+  },
+  "keywords": [
+    "meteor",
+    "settings",
+    "configuration"
+  ],
+  "author": "Robert Moskal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rmoskal/meteor-settings-from-env/issues"
+  },
+  "homepage": "https://github.com/rmoskal/meteor-settings-from-env#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
