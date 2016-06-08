@@ -42,10 +42,11 @@ describe ("meteor-settings-from-env", function(){
 
     it("does the full job with public variables", function(){
         var toTest = require( '../lib/main')();
+        delete process.env["METEOR_one"];
         process.env["METEOR_PUBLIC_one"] = "test";
         var settings = {one:'hey'};
         var res = toTest.do(settings);
-        res.should.deep.equal({ one: 'test', public: { one: 'test' } });
+        res.should.deep.equal({ one: 'hey', public: { one: 'test' } });
     });
 
 
