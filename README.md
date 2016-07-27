@@ -17,6 +17,10 @@ Depending on how your modules are set up, you might be able to simply call this 
 
 However, it seems mostly you cannot do this and have to do it much earlier in the boot process.  Modules in the /lib directory are run in alphabetical order. Place a module in this drectory named something like  _startup.js to make sure it is run before anything else.
 
-    require('meteor-settings-from-env')().do(Meteor.settings)
+    
+    
+If you want to use a different prefix, just pass it into the function:
+
+    require('meteor-settings-from-env')('FOO.').do(Meteor.settings)
 
 If you use this approach, you can still use a settings file, and not set any METEOR_ environment variables. Your development flow will be unchanged.
